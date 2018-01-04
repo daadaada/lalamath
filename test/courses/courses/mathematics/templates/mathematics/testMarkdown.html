@@ -1,0 +1,145 @@
+<!doctype html>
+<html>
+	<head>
+	  <meta charset="utf-8"/>
+        <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+  TeX: {
+  extensions: ["AMSmath.js", "AMSsymbols.js"]
+},
+  TeX: {extensions: ["autoload-all.js"]}
+});
+</script>
+	  <script src='https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+        <script src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+	  <script>
+	  	// do not worked! as the parameter is already been resolved.
+	  	function preProcessing(markdownText) {
+	  		console.log(markdownText);
+	  		var temp = markdownText.replace(/\\/g,'\\\\'); // replace \ with \\
+	  		console.log(temp);
+	  		var final = temp.replace(/\\\\n\\\\n/g,'\\n\\n'); // replace \\n\\n with \n\n
+	  		console.log(final);
+	  		return final;
+	  	}
+        var latexText;
+//	  	$(document).ready(function(){
+//            $.ajax({
+//             type:'GET',
+//             url:'/get/1.1.1',
+//             dataType:'json',
+//             success:function(data)
+//              {
+//                  latexText = data[0]['fields'];
+//                  console.log("in ajax: "+latexText);
+//                  document.getElementById('problem').innerHTML = latexText["problem"];
+//                   console.log(latexText["problem"]);
+//                  document.getElementById('choice').innerHTML = latexText["choicea"];
+//                  document.getElementById('answer').innerHTML = latexText["answer"];
+//                  document.getElementById('difficulty').innerHTLM = latexText["difficulty"];
+//                  document.getElementById('alternativesolutions').innerHTML = latexText["alternativesolutions"];
+//                  document.getElementById('solutions').innerHTML = latexText["solutions"];
+//                  document.getElementById('sensitivity').innerHTML = latexText["sensitivity"];
+//                    console.log("get preview success");
+//              },
+//             error:function(data)
+//             {
+//                //alert(data);
+//                 console.log(data);
+//                 console.log("get preview failed");
+//             }
+//            });
+//        });
+
+          function getdisplay(){
+              var questiontype = $("#questiontype").val();
+              var questioncode = $("#questioncode").val();
+              console.log(questiontype+">>>"+questioncode);
+              $.ajax({
+                  type:'GET',
+                  url:'/get/preview',
+                  dataType:'json',
+                   data:{
+                       'type':questiontype,
+                       'code':questioncode
+                    },
+                   success:function(data)
+                  {
+                      latexText = data[0]['fields'];
+                      console.log("in ajax: "+latexText);
+                      document.getElementById('problem').innerHTML = latexText["problem"]+"<img src=\"/"+latexText["problempicture1"]+"\">"
+                      +"<img src=\"/"+latexText["problempicture2"]+"\">"+"<img src=\"/"+latexText["problempicture3"]+"\">"+"<img src=\"/"+latexText["problempicture4"]+"\">"
+                      +"<img src=\"/"+latexText["problempicture5"]+"\">"+"<img src=\"/"+latexText["problempicture6"]+"\">";
+                      console.log(latexText["problem"]);
+                      document.getElementById('choicesa').innerHTML = latexText["choicesa"]+"<img src=\"/"+latexText["choicepicturea"]+"\" />";
+                      document.getElementById('choicesb').innerHTML = latexText["choicesb"]+"<img src=\"/"+latexText["choicepictureb"]+"\" />";
+                      document.getElementById('choicesc').innerHTML = latexText["choicesc"]+"<img src=\"/"+latexText["choicepicturec"]+"\" />";
+                      document.getElementById('choicesd').innerHTML = latexText["choicesd"]+"<img src=\"/"+latexText["choicepictured"]+"\" />";
+                      document.getElementById('choicese').innerHTML = latexText["choicese"]+"<img src=\"/"+latexText["choicepicturee"]+"\" />";
+                      document.getElementById('choicesf').innerHTML = latexText["choicesf"]+"<img src=\"/"+latexText["choicepicturef"]+"\" />";
+
+                      document.getElementById('answer').innerHTML = latexText["answer"]+"<img src=\"/"+latexText["solutionpicture1"]+"\">"
+                      +"<img src=\"/"+latexText["solutionpicture2"]+"\">"
+                      +"<img src=\"/"+latexText["solutionpicture3"]+"\">";
+                      document.getElementById('difficulty').innerHTLM = latexText["difficulty"];
+                      document.getElementById('alternativesolutions').innerHTML = latexText["alternativesolutions"];
+                      document.getElementById('solutions').innerHTML = latexText["solutions"];
+                      document.getElementById('sensitivity').innerHTML = latexText["sensitivity"];
+
+                       MathJax.Hub.PreProcess();
+                       MathJax.Hub.Process();
+                  },
+                 error:function(data)
+                 {
+                     alert(data);
+                     console.log(data);
+                 }
+              });
+          }
+	  </script>
+	  <title>question preview</title>
+	</head>
+    <select id="questiontype">
+        <option value="1">Example-Expl</option>
+        <option value="2">Exercise-Exer</option>
+        <option value="3">Problem-Prob</option>
+        <option value="4">DIY-DIY</option>
+        <option value="5">quizs-Qui</option>
+    </select>
+
+    <input id="questioncode" type="text" name="questioncode" value="1.1.1"/>
+    <input id="display" type="submit" value="display" onclick="return getdisplay()"/>
+
+
+	<body id="body">
+    <hr width=100% size=1 color=#bbbcbc style="FILTER: alpha(opacity=100,finishopacity=0)">
+    problem:
+	  <div id="problem"></div>
+    <hr width=100% size=1 color=#bbbcbc style="FILTER: alpha(opacity=100,finishopacity=0)">
+    answer:
+      <div id="answer"></div>
+    <hr width=100% size=1 color=#bbbcbc style="FILTER: alpha(opacity=100,finishopacity=0)">
+    choice:
+      <div id="choicesa"></div>
+    <div id="choicesb"></div>
+    <div id="choicesc"></div>
+    <div id="choicesd"></div>
+    <div id="choicese"></div>
+    <div id="choicesf"></div>
+    <hr width=100% size=1 color=#bbbcbc style="FILTER: alpha(opacity=100,finishopacity=0)">
+    difficulty:
+      <div id="difficulty"></div>
+    <hr width=100% size=1 color=#bbbcbc style="FILTER: alpha(opacity=100,finishopacity=0)">
+    alternative solutions:
+      <div id="alternativesolutions"></div>
+    <hr width=100% size=1 color=#bbbcbc style="FILTER: alpha(opacity=100,finishopacity=0)">
+    solutions:
+      <div id="solutions"></div>
+    <hr width=100% size=1 color=#bbbcbc style="FILTER: alpha(opacity=100,finishopacity=0)">
+    sensitivity:
+      <div id="sensitivity"></div>
+    <hr width=100% size=1 color=#bbbcbc style="FILTER: alpha(opacity=100,finishopacity=0)">
+	  <!--$$x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}$$ <!-- don't need to add additional '\' -->
+  </body>
+</html>

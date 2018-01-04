@@ -1,0 +1,8 @@
+<uwsgi>
+    <socket>0.0.0.0:9090</socket>
+    <chdir>/var/www/html/test/courses/courses</chdir>
+    <module>django_wsgi</module>
+    <processes>1</processes>
+    <daemonize>/tmp/uwsgi.log</daemonize>
+    <buffer-size>32000</buffer-size>
+</uwsgi>

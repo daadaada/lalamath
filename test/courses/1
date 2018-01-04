@@ -1,0 +1,104 @@
+*** Starting uWSGI 2.0.15 (64bit) on [Mon May 15 00:12:21 2017] ***
+compiled with version: 4.8.4 on 26 April 2017 17:27:23
+os: Linux-4.4.0-75-generic #96~14.04.1-Ubuntu SMP Thu Apr 20 11:06:30 UTC 2017
+nodename: math3425
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 2
+current working directory: /var/www/html/test/courses
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to .
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 31832
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address :9090 fd 3
+Python version: 2.7.6 (default, Oct 26 2016, 20:33:43)  [GCC 4.8.4]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0xfc3510
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 72760 bytes (71 KB) for 1 cores
+*** Operational MODE: single process ***
+failed to open python file django_wsgi.py
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. going in full dynamic mode ***
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI worker 1 (and the only) (pid: 19255, cores: 1)
+--- no python application found, check your startup logs for errors ---
+[pid: 19255|app: -1|req: -1/1] 175.159.120.68 () {48 vars in 1096 bytes} [Mon May 15 00:12:31 2017] POST /get/api/users/65/questions/332 => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 19255|app: -1|req: -1/2] 143.89.241.149 () {44 vars in 1017 bytes} [Mon May 15 00:12:39 2017] GET /admin/ => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 19255|app: -1|req: -1/3] 143.89.241.149 () {44 vars in 992 bytes} [Mon May 15 00:12:39 2017] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 19255|app: -1|req: -1/4] 143.89.241.149 () {46 vars in 1048 bytes} [Mon May 15 00:12:42 2017] GET /admin/ => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 19255|app: -1|req: -1/5] 143.89.241.149 () {44 vars in 992 bytes} [Mon May 15 00:12:42 2017] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 19255|app: -1|req: -1/6] 175.159.126.102 () {48 vars in 1053 bytes} [Mon May 15 00:13:00 2017] POST /get/api/users/43/questions/204 => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 19255|app: -1|req: -1/7] 175.159.123.84 () {42 vars in 921 bytes} [Mon May 15 00:13:13 2017] GET /get/api/questions/getcount => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 19255|app: -1|req: -1/8] 1.64.137.23 () {48 vars in 1026 bytes} [Mon May 15 00:14:24 2017] POST /get/api/users/40/questions/259 => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+*** Starting uWSGI 2.0.15 (64bit) on [Mon May 15 00:14:30 2017] ***
+compiled with version: 4.8.4 on 26 April 2017 17:27:23
+os: Linux-4.4.0-75-generic #96~14.04.1-Ubuntu SMP Thu Apr 20 11:06:30 UTC 2017
+nodename: math3425
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 2
+current working directory: /var/www/html/test/courses
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to .
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 31832
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address :9090 fd 3
+Python version: 2.7.6 (default, Oct 26 2016, 20:33:43)  [GCC 4.8.4]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0xc2a510
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 72760 bytes (71 KB) for 1 cores
+*** Operational MODE: single process ***
+failed to open python file django_wsgi.py
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. going in full dynamic mode ***
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI worker 1 (and the only) (pid: 19314, cores: 1)
+--- no python application found, check your startup logs for errors ---
+[pid: 19314|app: -1|req: -1/1] 143.89.241.149 () {46 vars in 1048 bytes} [Mon May 15 00:14:40 2017] GET /admin/ => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 19314|app: -1|req: -1/2] 143.89.241.149 () {44 vars in 992 bytes} [Mon May 15 00:14:40 2017] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 19314|app: -1|req: -1/3] 143.89.241.149 () {46 vars in 1048 bytes} [Mon May 15 00:14:42 2017] GET /admin/ => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 19314|app: -1|req: -1/4] 143.89.241.149 () {44 vars in 992 bytes} [Mon May 15 00:14:42 2017] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 19314|app: -1|req: -1/5] 42.3.223.59 () {48 vars in 1002 bytes} [Mon May 15 00:15:03 2017] POST /get/api/users/58/questions/196 => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 19314|app: -1|req: -1/6] 42.3.223.59 () {42 vars in 849 bytes} [Mon May 15 00:15:36 2017] GET /get/api/questions/getcount => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 19314|app: -1|req: -1/7] 42.3.223.59 () {42 vars in 849 bytes} [Mon May 15 00:16:03 2017] GET /get/api/questions/getcount => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 19314|app: -1|req: -1/8] 42.3.223.59 () {42 vars in 849 bytes} [Mon May 15 00:16:08 2017] GET /get/api/questions/getcount => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 19314|app: -1|req: -1/9] 124.244.177.121 () {42 vars in 994 bytes} [Mon May 15 00:16:21 2017] GET /get/api/questions/getcount => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 19314|app: -1|req: -1/10] 124.244.177.121 () {42 vars in 994 bytes} [Mon May 15 00:16:33 2017] GET /get/api/questions/getcount => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 19314|app: -1|req: -1/11] 124.244.177.121 () {44 vars in 1020 bytes} [Mon May 15 00:16:38 2017] GET /ProblemForm => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 19314|app: -1|req: -1/12] 124.244.177.121 () {46 vars in 1012 bytes} [Mon May 15 00:16:39 2017] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 19314|app: -1|req: -1/13] 124.244.177.121 () {42 vars in 965 bytes} [Mon May 15 00:16:43 2017] GET /get/questions/all => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 19314|app: -1|req: -1/14] 124.244.177.121 () {42 vars in 948 bytes} [Mon May 15 00:16:43 2017] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
